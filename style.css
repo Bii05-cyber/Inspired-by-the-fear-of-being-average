@@ -1,0 +1,120 @@
+body {
+  background: transparent; /* outside is clear in Notion */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+}
+
+/* Card */
+.spotify-card {
+  background: #181818; /* card stays black */
+  color: white;
+  border-radius: 16px;
+  width: 260px; /* smaller than 320px */
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Cover art */
+.cover {
+  width: 100%;
+  height: 160px; /* smaller than 200px */
+  object-fit: cover;
+}
+
+/* Meta info */
+.meta {
+  padding: 12px;
+  display: flex;              /* arrange horizontally */
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Group text elements together */
+.meta-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.meta h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.meta p {
+  margin: 2px 0 0;
+  font-size: 13px;
+  color: #b3b3b3;
+}
+
+
+/* Play button */
+.play-btn {
+  background: #1db954;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 48px;  /* smaller than 56px */
+  height: 48px;
+  font-size: 20px; /* smaller than 22px */
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.play-btn:hover {
+  background: #1ed760;
+  transform: scale(1.05);
+}
+
+/* Tracklist */
+.tracklist {
+  background: #121212;
+  padding: 8px 12px;
+  font-size: 13px; /* slightly smaller */
+  max-height: 180px; /* smaller than 220px */
+  overflow-y: auto;
+  border-top: 1px solid #282828;
+}
+
+.track {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  border-bottom: 1px solid #222;
+  cursor: pointer;
+  color: #ddd;
+}
+
+.track:last-child {
+  border-bottom: none;
+}
+
+.track:hover {
+  color: #fff;
+  background: #1a1a1a;
+}
+
+/* Active track */
+.track.active {
+  color: #1db954;
+  font-weight: bold;
+}
+
+/* Scrollbar styling */
+.tracklist::-webkit-scrollbar {
+  width: 6px;
+}
+.tracklist::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 3px;
+}
+.tracklist::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
